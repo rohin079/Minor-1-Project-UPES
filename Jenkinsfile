@@ -12,7 +12,10 @@ pipeline {
         stage('Build') {
             steps {
                 // Run your build commands here
-                sh 'npm install' // Example for a Node.js project
+                sh '''
+                    cd minor-1-project
+                    npm install
+                ''' // Example for a Node.js project
             }
         }
 
