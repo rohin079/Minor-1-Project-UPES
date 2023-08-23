@@ -21,7 +21,10 @@ pipeline {
         stage('Test') {
             steps {
                 // Run your tests here
-                sh 'npm test' // Example for a Node.js project
+                 sh '''
+                    cd minor-1-project
+                    npm test
+                ''' // Example for a Node.js project
             }
         }
 
