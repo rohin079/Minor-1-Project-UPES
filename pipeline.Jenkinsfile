@@ -2,12 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                // Checkout the code from the GitHub repository
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://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@github.com/rohin079/Minor-1-Project-UPES.git']]])
-            }
-        }
+    stage('Checkout') {
+      steps {
+        checkout scm
+      }
+    }
 
         stage('Build') {
             steps {
