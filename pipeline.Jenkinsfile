@@ -21,10 +21,10 @@ pipeline {
         stage('Test') {
             steps {
                 // Run your tests here
-                sh'''
+                 sh '''
                     cd minor-1-project
-                    npm test 
-                '''// Example for a Node.js project
+                    npm test
+                ''' // Example for a Node.js project
             }
         }
 
