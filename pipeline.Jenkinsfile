@@ -5,33 +5,33 @@ pipeline {
 
         stage('Cleanup Workspace') {
             steps {
-                cleanWs()
+                clean()
             }
         }
         stage('Build') {
             steps {
                 // Run your build commands here
-                sh '''
+                bat '''
                     cd minor-1-project
                     npm install
                 ''' // Example for a Node.js project
             }
         }
 
-        stage('Test') {
-            steps {
-                // Run your tests here
-                 sh '''
-                    cd minor-1-project
-                    npm test
-                ''' // Example for a Node.js project
-            }
-        }
+        // stage('Test') {
+        //     steps {
+        //         // Run your tests here
+        //          bat '''
+        //             cd minor-1-project
+        //             npm test
+        //         ''' // Example for a Node.js project
+        //     }
+        // }
 
         // stage('Deploy') {
         //     steps {
         //         // Deploy your application
-        //         sh './deploy.sh' // Example deployment script
+        //         bat './deploy.bat' // Example deployment script
         //     }
         // }
     }
