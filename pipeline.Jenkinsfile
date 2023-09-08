@@ -1,52 +1,45 @@
 pipeline {
     agent any
 
-    stages {
-
-        stage('Cleanup Workspace') {
-            steps {
-                clean()
-            }
-        }
-        stage('Build') {
-            steps {
-                // Run your build commands here
-                bat '''
-                    cd minor-1-project
-                    npm install
-                ''' // Example for a Node.js project
-            }
-        }
-
-        // stage('Test') {
-        //     steps {
-        //         // Run your tests here
-        //          bat '''
-        //             cd minor-1-project
-        //             npm test
-        //         ''' // Example for a Node.js project
-        //     }
-        // }
-
-        // stage('Deploy') {
-        //     steps {
-        //         // Deploy your application
-        //         bat './deploy.bat' // Example deployment script
-        //     }
-        // }
+    environment {
+        NODEJS_HOME = 'C:\Program_Files\nodejs\'
+        NPM_HOME = 'C:\Users\aaksh\AppData\Roaming\npm'
+        // MONGODB_URL = 'mongodb://localhost:27017/your-database-name'
     }
 
-    post {
-        success {
-            echo 'Pipeline succeeded!'
-
-            // You can add additional post-success actions here
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout your code repository
+                checkout scm
+            }
         }
 
-        failure {
-            echo 'Pipeline failed :('
+        stage('Install Dependencies') {
+            steps {
+                bat "${NODEJS_HOME}\\npm install"
+            }
+        }
 
-            // You can add additional post-failure actions here
+        stage('Build and Test') {
+            steps {
+                bat "${NODEJS_HOME}\\npm run build"
+                // Add any testing steps here
+            }
+        }
+
+        stage('Deployment') {
+            steps {
+                // Stop your existing Node.js app if needed
+                // bat "${NODEJS_HOME}\\npm stop"
+
+                // // Deploy the latest code
+                // bat "${NODEJS_HOME}\\npm start"
+
+                // Optionally, you can also deploy your frontend (React) separately if needed
+                // bat "cd frontend && ${NODEJS_HOME}\\npm install && ${NODEJS_HOME}\\npm run build"
+                // bat "cd frontend && ${NODEJS_HOME}\\npm start"
+            }
         }
     }
 }
