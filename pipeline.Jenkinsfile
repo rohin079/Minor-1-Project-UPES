@@ -11,7 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Run your build commands here
-                sh '''
+                ps '''
                     cd minor-1-project
                     npm install
                 ''' // Example for a Node.js project
