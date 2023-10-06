@@ -1,0 +1,54 @@
+
+
+*{
+    margin:0;
+    padding:0;
+    font-family:'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: #ffff;
+    padding: 100px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.row{
+    width : 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col{
+    flex-basis: 25%;
+    padding: 10px;
+
+}
+
+.HatLogo{
+    width:100px;
+    margin: 30px;
+    position: relative;
+    top: -90px;
+    left: -80px;
+}
+
+.textunderimg{
+    position: relative;
+    top: -118px;
+    left: -70px;
+    font-size: 25px;
+    font-weight: 800;
+    font-style: italic;
+    font-family: cursive;
+}
+
