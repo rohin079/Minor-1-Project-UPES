@@ -52,3 +52,18 @@ footer{
     font-family: cursive;
 }
 
+.col h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative; 
+}
+
+.email{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+}
+
+/*.facebook{
+    content: url('facebook-square.svg');
+}*/
+
