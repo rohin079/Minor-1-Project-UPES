@@ -1,5 +1,6 @@
 import React from "react";
-import './AboutUs.css'
+import './AboutUs.css';
+import Images from "../Images/about-pic.jpg";
 
 
 
@@ -8,7 +9,7 @@ const AboutUs = (props) => {
       <div className={`about-us ${props.theme === 'dark' ? 'dark-mode' : ''}`}>
         <section className={`about-us ${props.theme === 'dark' ? 'dark-mode' : ''}`} style={{fontFamily:"'Poppins', sans-serif"}}>
           <div className="about">
-          {/* <img src={} alt="About Us" className="pic" /> */}
+          <img src={Images} alt="About Us" className="pic" />
             <div className="text">
               <h2 className="heading" style={{color: `${props.theme === 'dark' ? '#f5f5f5' : '#333'}`}}>About Us</h2>
                <h5 style={{color: `${props.theme === 'dark' ? '#f5f5f5' : '#333'}`}}>At our <span>Lost &amp;Found</span></h5>
