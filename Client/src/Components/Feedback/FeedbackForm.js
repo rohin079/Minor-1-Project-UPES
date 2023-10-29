@@ -138,6 +138,6 @@ const FeedbackForm = (props) => {
 
     </>
   )
-}
+};
 
-export default FeedbackForm
+export default FeedbackForm;
