@@ -5,12 +5,14 @@ import Home from './Components/Home/Home'
 import About from './Components/About/AboutUs'
 import Events from './Components/Events/Events'
 import Feedback from './Components/Feedback/FeedbackForm'
+import Login from './Components/Login/Login'
 
 
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Login />
+      {/* <Navbar />
       <Routes>
       
       <Route path="/" element={<Home />} />
@@ -18,12 +20,8 @@ function App() {
       <Route path="/events" element={<Events />} />
       <Route path="/feedback" element={<Feedback />} />
      </Routes>
-      {/* <Home /> */}
-      {/* <About /> */}
-      {/* <Navbar />
-      <Events />
+      
       <Footer /> */}
-      {/* <Feedback /> */}
     </Router>
   );
 };
