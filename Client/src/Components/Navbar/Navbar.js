@@ -8,28 +8,28 @@ const Navbar = () => {
         <nav className="main-nav">
           <ul className={`main-menu`}>
             <li className={`menu-item`}>
-              <NavLink exact activeClassName="is-active" to="#">
+              <NavLink exact activeClassName="is-active" to="/home">
                 Home
               </NavLink>
             </li>
             <li className={`menu-item `}>
-              <NavLink activeClassName="is-active" to="#">
+              <NavLink activeClassName="is-active" to="/about">
                 About
               </NavLink>
             </li>
             <li className={`menu-item`}>
-              <NavLink activeClassName="is-active" to="#">
-                Items Gallery
+              <NavLink activeClassName="is-active" to="/events">
+                Events
               </NavLink>
             </li>
             <li className={`menu-item`}>
               <NavLink activeClassName="is-active" to="#">
-                Help Us Find
+                Resources
               </NavLink>
             </li>
             <li className={`menu-item`}>
               <NavLink activeClassName="is-active" to="#">
-                FAQ
+                Achievements
               </NavLink>
             </li>
             <li className={`menu-item`}>
