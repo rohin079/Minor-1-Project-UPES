@@ -1,20 +1,15 @@
 # Use an official Node.js runtime as the base image
-FROM node:14
+FROM node:18-alpine
 
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the container
-COPY package*.json ./
+COPY public/ /app/public
+COPY src/ /app/src
+COPY package.json /app/
 
 # Install application dependencies
 RUN npm install
-
-# Copy the rest of the application source code to the container
-COPY . .
-
-# Expose the port that the application will run on
-EXPOSE 3000
 
 # Define the command to start your application
 CMD ["npm", "start"]
