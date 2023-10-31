@@ -1,51 +1,34 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // Import Link instead of NavLink
 import './Navbar.css';
 
 const Navbar = () => {
-    return(
-        <div className={`header__middle__menus`}>
-        <nav className="main-nav">
-          <ul className={`main-menu`}>
-            <li className={`menu-item`}>
-              <NavLink exact activeClassName="is-active" to="/home">
-                Home
-              </NavLink>
-            </li>
-            <li className={`menu-item `}>
-              <NavLink activeClassName="is-active" to="/about">
-                About
-              </NavLink>
-            </li>
-            <li className={`menu-item`}>
-              <NavLink activeClassName="is-active" to="/events">
-                Events
-              </NavLink>
-            </li>
-            <li className={`menu-item`}>
-              <NavLink activeClassName="is-active" to="#">
-                Resources
-              </NavLink>
-            </li>
-            <li className={`menu-item`}>
-              <NavLink activeClassName="is-active" to="#">
-                Achievements
-              </NavLink>
-            </li>
-            <li className={`menu-item`}>
-              <NavLink activeClassName="is-active" to="/alumnitalk">
-                Alumni Talk
-              </NavLink>
-            </li>
-            <li className={`menu-item`}>
-              <NavLink activeClassName="is-active" to="/feedbackform">
-                Feedback
-              </NavLink>
-            </li>
-            </ul>
-            </nav>
-            </div>
-
-    );
+  return (
+    <div className={`header__middle__menus`}>
+      <nav className="main-nav">
+        <ul className={`main-menu`}>
+          <li className={`menu-item`}>
+            <Link to="/">Home</Link> {/* Use Link instead of NavLink */}
+          </li>
+          <li className={`menu-item`}>
+            <Link to="/about">About</Link> {/* Use Link instead of NavLink */}
+          </li>
+          <li className={`menu-item`}>
+            <Link to="/events">Events</Link> {/* Use Link instead of NavLink */}
+          </li>
+          <li className={`menu-item`}>
+            <Link to="#">Resources</Link> {/* Use Link instead of NavLink */}
+          </li>
+          <li className={`menu-item`}>
+            <Link to="#">Achievements</Link> {/* Use Link instead of NavLink */}
+          </li>
+          <li className={`menu-item`}>
+            <Link to="/feedback">Feedback</Link> {/* Use Link instead of NavLink */}
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
 };
+
 export default Navbar;
