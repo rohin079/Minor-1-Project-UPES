@@ -4,29 +4,20 @@ import Navbar from './Components/Navbar/Navbar';
 import Home from './Components/Home/Home'
 import About from './Components/About/AboutUs'
 import Events from './Components/Events/Events'
-import { BrowserRouter as Router } from 'react-router-dom';
 import Feedback from './Components/Feedback/FeedbackForm'
-
-
-import Feedback from './Components/Feedback/FeedbackForm'
+import Alumni from './Components/AlumniTalk/alumni'
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-      
       <Route path="/home" element={<Home />} />
-      <Route path="/about" elements={<About />} />
-      <Route path="/events" elements={<Events />} />
-      <Route path="/feedback" elements={<Feedback />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/events" element={<Events />} />
+      <Route path="/feedbackform" element={<Feedback />} />
+      <Route path='/alumnitalk' element={<Alumni />} />
      </Routes>
-      {/* <Home /> */}
-      {/* <About /> */}
-      {/* <Navbar />
-      <Events />
-      <Footer /> */}
-      <Feedback />
     </Router>
   );
 };
