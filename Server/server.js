@@ -2,10 +2,17 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 // ---------------------------Creating Express App ----------------------------------------
 
 const app = express();
+
+//--------------------------Allowing CORS---------------------------------------------------
+
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // ---------------------------Connecting With MongoDB--------------------------------------
 
@@ -54,4 +61,8 @@ app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
 });
 
-//------------------------------------------------------------------------------------
+//-----------------------------Feedback Page End Point-----------------------------------------
+
+app.use('/feedback', require('./Routes/Feedback'));
+
+//----------------------------------------------------------------------------------------------

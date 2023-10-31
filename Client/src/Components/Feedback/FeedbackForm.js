@@ -20,7 +20,7 @@ const CssTextField = styled(TextField)({
 
 const FeedbackForm = (props) => {
   const [details, setDetails] = React.useState({ email: "", feedback: "" });
-  const host = "https://lost-and-found.cyclic.app";
+  const host = "http://localhost:5000";
 
   const onChange = async (e) => {
     setDetails({ ...details, [e.target.name]: e.target.value })
