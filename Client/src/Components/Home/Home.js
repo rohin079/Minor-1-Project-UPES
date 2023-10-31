@@ -1,16 +1,20 @@
 import './Home.css';
-import React, { useRef, useMemo } from 'react';
+import React, { } from 'react';
 import image from './giphy.gif';
 import { Button } from '@mui/material';
+import { useMsal } from "@azure/msal-react";
 import { NavLink } from 'react-router-dom';
 
 const Home = (props) => {
+  const { instance } = useMsal();
 
-  const [text, setText] = React.useState('Connect with you mates!!');
+  const [text] = React.useState('Connect with you mates!!');
 
+  // const iRef = useRef(0);
 
-  const iRef = useRef(0);
-
+  const handleSignOut = () => {
+    instance.logout();
+  };
 
   return (
     <>
@@ -41,7 +45,7 @@ const Home = (props) => {
                 <NavLink to="" style={{ textDecoration: 'none' }}>
                   <Button
                     className="sign-out-button" // Use the same class name as the "Sign Out" button
-                    // onClick={handleSignOut}
+                    onClick={handleSignOut}
                     variant="contained"
                     color="secondary"
                     style={{

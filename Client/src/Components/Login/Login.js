@@ -2,9 +2,28 @@ import React from 'react';
 import './Login.css';
 import logo from './login.gif';
 import { Button } from '@mui/material';
+import { useMsal } from "@azure/msal-react";
+import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 
 
 export default function Login(props) {
+
+  const { instance } = useMsal();
+  const navigate = useNavigate(); // Get the navigate function from useNavigate
+
+  const handleLogin = async () => {
+    try {
+      await instance.loginPopup({
+        redirectUri: "http://localhost:3000/", // Update this with the correct redirect URI
+      });
+
+      // After successful login, navigate to the home path
+      navigate('/home');
+    } catch (error) {
+      console.log("Error during login:", error);
+    }
+  };
+
   return (
     <div className={`bdy ${props.theme === 'dark' ? 'dark-mode' : ''}`}>
       <div className='row'>
@@ -12,7 +31,7 @@ export default function Login(props) {
           <h2 className='title'><span style={{ color: '#9C27B0' }}>uni</span>  - <span className='found'>Connect</span></h2>
           <h1 className='title' style={{ color: `${props.theme === 'dark' ? '#f5f5f5' : '#333'}` }}>Welcome !</h1>
           <div className='login-btn'>
-            <Button variant="contained" color="secondary" style={{ textTransform: "none", borderRadius: "10px", fontFamily: "'Poppins', sans-serif", fontSize: "1.1rem" }}>Login with Outlook</Button>
+           <Button onClick={handleLogin} variant="contained" color="secondary" style={{ textTransform: "none", borderRadius: "10px", fontFamily: "'Poppins', sans-serif", fontSize: "1.1rem" }}>Login with Outlook</Button>
           </div>
         </div>
         <div className='banner col col-sm-6'>

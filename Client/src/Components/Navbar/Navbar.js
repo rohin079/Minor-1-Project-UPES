@@ -8,7 +8,7 @@ const Navbar = () => {
       <nav className="main-nav">
         <ul className={`main-menu`}>
           <li className={`menu-item`}>
-            <Link to="/">Home</Link> {/* Use Link instead of NavLink */}
+            <Link to="/home">Home</Link> {/* Use Link instead of NavLink */}
           </li>
           <li className={`menu-item`}>
             <Link to="/about">About</Link> {/* Use Link instead of NavLink */}
