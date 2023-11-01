@@ -10,6 +10,7 @@ import About from './Components/About/AboutUs';
 import Events from './Components/Events/Events';
 import Feedback from './Components/Feedback/FeedbackForm';
 import Login from './Components/Login/Login';
+import Alumni from "./Components/AlumniTalk/alumni";
 
 //------------------------Importing Msal config----------------------------------
 
@@ -69,9 +70,9 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
+        <Route path="/alumni" element={<Alumni />} />
         <Route path="/feedback" element={<Feedback />} />
       </Routes>
-      
       {/* <Footer /> */}
     </Router>
         </MsalProvider>

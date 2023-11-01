@@ -5,6 +5,7 @@
 .bdy {
     background-color: #ffffff;
     height: 85.5vh;
+    overflow: hidden;
 }
 
 .bdy.dark-mode {

@@ -62,7 +62,7 @@ const Home = (props) => {
               </div>
             </div>
             <div className="col-md-7 pt-5 d-flex flex-column align-items-center">
-              <img className="img-fluid" style={{ width: "25%" }} src={image} alt="" />
+              <img className="img-fluid" style={{ width: "65%" }} src={image} alt="" />
             </div>
           </div>
         </div>

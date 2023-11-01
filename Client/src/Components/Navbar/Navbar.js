@@ -20,6 +20,9 @@ const Navbar = () => {
             <Link to="#">Resources</Link> {/* Use Link instead of NavLink */}
           </li>
           <li className={`menu-item`}>
+            <Link to="/alumni">Alumni Talk</Link> {/* Use Link instead of NavLink */}
+          </li>
+          <li className={`menu-item`}>
             <Link to="#">Achievements</Link> {/* Use Link instead of NavLink */}
           </li>
           <li className={`menu-item`}>

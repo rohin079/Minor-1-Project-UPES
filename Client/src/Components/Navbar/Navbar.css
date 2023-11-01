@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    /* height: 80px; */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -29,6 +29,7 @@
   .main-nav {
     display: flex;
     align-items: center;
+    height: 10vh;
   }
   
   .main-menu {
@@ -39,6 +40,7 @@
   
   .menu-item {
     margin-left: 20px;
+    font-size: large;
   }
   
   .menu-item:first-child {
@@ -293,7 +295,7 @@
     align-items: center;
     color: #333;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px;
     padding-top: 5px;
   }
   
