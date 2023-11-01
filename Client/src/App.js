@@ -63,18 +63,19 @@ function App() {
   return (
     <MsalProvider instance={new PublicClientApplication(msalConfig)}>
     <Router>
-      {/* <Login /> */}
       <Navbar />
       <Routes>
       
-        <Route path="/" element={<Login />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/alumni" element={<Alumni />} />
-        <Route path="/feedback" element={<Feedback />} />
+      <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/login" element={<Login />} />
+
+
+        <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+        <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
+        <Route path="/events" element={<ProtectedRoute><Events /></ProtectedRoute>} />
+        <Route path="/feedback" element={<ProtectedRoute><Feedback /></ProtectedRoute>} />
+        <Route path="/alumni" element={<ProtectedRoute><Alumni /></ProtectedRoute>} />
       </Routes>
-      {/* <Footer /> */}
     </Router>
         </MsalProvider>
   );
