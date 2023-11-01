@@ -11,6 +11,7 @@ import Events from './Components/Events/Events';
 import Feedback from './Components/Feedback/FeedbackForm';
 import Login from './Components/Login/Login';
 import Alumni from "./Components/AlumniTalk/alumni";
+import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 
 //------------------------Importing Msal config----------------------------------
 
@@ -80,6 +81,7 @@ function App() {
 };
 
 // ---------------------Sign-out component to handle sign-out process-----------------
+
 const SignOut = () => {
   const { instance } = useMsal();
 
@@ -96,5 +98,7 @@ const SignOut = () => {
     </div>
   );
 };
+
+//----------------------------------------------------------------------------------
 
 export default App;
