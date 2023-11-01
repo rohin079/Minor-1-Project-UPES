@@ -10,6 +10,7 @@ import About from './Components/About/AboutUs';
 import Events from './Components/Events/Events';
 import Feedback from './Components/Feedback/FeedbackForm';
 import Login from './Components/Login/Login';
+import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 
 //------------------------Importing Msal config----------------------------------
 
@@ -64,12 +65,14 @@ function App() {
       {/* <Login /> */}
       <Navbar />
       <Routes>
-      
-        <Route path="/" element={<Login />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/feedback" element={<Feedback />} />
+      <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/login" element={<Login />} />
+
+
+        <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+        <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
+        <Route path="/events" element={<ProtectedRoute><Events /></ProtectedRoute>} />
+        <Route path="/feedback" element={<ProtectedRoute><Feedback /></ProtectedRoute>} />
       </Routes>
       
       {/* <Footer /> */}
@@ -79,6 +82,7 @@ function App() {
 };
 
 // ---------------------Sign-out component to handle sign-out process-----------------
+
 const SignOut = () => {
   const { instance } = useMsal();
 
@@ -95,5 +99,7 @@ const SignOut = () => {
     </div>
   );
 };
+
+//----------------------------------------------------------------------------------
 
 export default App;
