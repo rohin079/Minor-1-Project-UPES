@@ -1,44 +1,141 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import React, { useEffect, useState } from 'react'
+import "./Gallery.css";
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField } from '@mui/material';
+import img from "./Images/hackathon.jpeg";
+import img2 from "./Images/marathon.jpeg";
+import img3 from "./Images/mark.jpeg";
+import img4 from "./Images/nss.jpeg";
+import img5 from './Images/runway.jpeg';
+import img6 from "./Images/shakti.jpeg"
 
 const Gallery = () => {
-  const history = useHistory();
-  const [images, setImages] = useState([]);
-
-  useEffect(() => {
-    (async () => {
-      const res = await axios.get("/api/images");
-      console.log(res);
-      setImages(res.data);
-    })();
-  }, []);
-
-  if (images.length === 0) {
-    return <h1 className="h4 text-center">There are no Images yet</h1>
-  }
-
   return (
-    <div className="row">
-      {images.map((image) => (
-        <div
-          className="col-md-4 p-1"
-          key={image._id}
-          onClick={() => history.push(`/images/${image._id}`)}
-        >
-          <div className="card bg-dark h-100 card-image">
-            <div className="card-body">
-              <img
-                src={image.url}
-                alt=""
-                className="img-fluid h-100 w-100"
-                style={{ objectFit: "cover" }}
-              />
+    <>
+    <h1 className="text-center" >UPES Gallery</h1>
+    <div className="d-flex flex-wrap justify-content-center my-3" style={{ paddingBottom: '150px'}}>
+        <div className="card-container">
+          <div className="cards-item">
+            <img src={img6} alt="items" />
+            <div className="intro">
+              <Button
+                className="button"
+                size="small"
+                style={{
+                  textTransform: 'none',
+                  fontFamily: "'Poppins', sans-serif",
+                  marginLeft: '75px',
+                  borderRadius: '10px',
+                }}
+                variant="contained"
+                color="secondary">
+                See Details
+              </Button>
             </div>
           </div>
         </div>
-      ))}
+        <div className="card-container">
+          <div className="cards-item">
+            <img src={img} alt="items" />
+            <div className="intro">
+              <Button
+                className="button"
+                size="small"
+                style={{
+                  textTransform: 'none',
+                  fontFamily: "'Poppins', sans-serif",
+                  marginLeft: '75px',
+                  borderRadius: '10px',
+                }}
+                variant="contained"
+                color="secondary">
+                See Details
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="card-container">
+          <div className="cards-item">
+            <img src={img2} alt="items" />
+            <div className="intro">
+              <Button
+                className="button"
+                size="small"
+                style={{
+                  textTransform: 'none',
+                  fontFamily: "'Poppins', sans-serif",
+                  marginLeft: '75px',
+                  borderRadius: '10px',
+                }}
+                variant="contained"
+                color="secondary">
+                See Details
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="card-container">
+          <div className="cards-item">
+            <img src={img3} alt="items" />
+            <div className="intro">
+              <Button
+                className="button"
+                size="small"
+                style={{
+                  textTransform: 'none',
+                  fontFamily: "'Poppins', sans-serif",
+                  marginLeft: '75px',
+                  borderRadius: '10px',
+                }}
+                variant="contained"
+                color="secondary">
+                See Details
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="card-container">
+          <div className="cards-item">
+            <img src={img4} alt="items" />
+            <div className="intro">
+              <Button
+                className="button"
+                size="small"
+                style={{
+                  textTransform: 'none',
+                  fontFamily: "'Poppins', sans-serif",
+                  marginLeft: '75px',
+                  borderRadius: '10px',
+                }}
+                variant="contained"
+                color="secondary">
+                See Details
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="card-container">
+          <div className="cards-item">
+            <img src={img5} alt="items" />
+            <div className="intro">
+              <Button
+                className="button"
+                size="small"
+                style={{
+                  textTransform: 'none',
+                  fontFamily: "'Poppins', sans-serif",
+                  marginLeft: '75px',
+                  borderRadius: '10px',
+                }}
+                variant="contained"
+                color="secondary">
+                See Details
+              </Button>
+            </div>
+          </div>
+        </div>
+      
     </div>
+  </>
   );
 };
 

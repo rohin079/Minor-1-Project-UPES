@@ -26,6 +26,9 @@ const Navbar = () => {
             <Link to="#">Achievements</Link> {/* Use Link instead of NavLink */}
           </li>
           <li className={`menu-item`}>
+            <Link to="/gallery">Gallery</Link> {/* Use Link instead of NavLink */}
+          </li>
+          <li className={`menu-item`}>
             <Link to="/feedback">Feedback</Link> {/* Use Link instead of NavLink */}
           </li>
         </ul>
