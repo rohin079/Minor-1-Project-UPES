@@ -13,6 +13,7 @@ import Login from './Components/Login/Login';
 import Alumni from "./Components/AlumniTalk/alumni";
 import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 import Gallery from './Components/Gallery/Gallery'
+import Resources from "./Components/Resources/Resources";
 
 //------------------------Importing Msal config----------------------------------
 
@@ -73,6 +74,7 @@ function App() {
         <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
         <Route path="/events" element={<ProtectedRoute><Events /></ProtectedRoute>} />
         <Route path="/gallery" element={<ProtectedRoute><Gallery /></ProtectedRoute>} />
+        <Route path="/resources" element={<ProtectedRoute><Resources /></ProtectedRoute>} />
         <Route path="/feedback" element={<ProtectedRoute><Feedback /></ProtectedRoute>} />
         <Route path="/alumni" element={<ProtectedRoute><Alumni /></ProtectedRoute>} />
       </Routes>
