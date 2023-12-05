@@ -6,10 +6,10 @@ import Images from "./about1.png";
 
 const AboutUs = (props) => {
     return (
-      <div className={`about-us ${props.theme === 'dark' ? 'dark-mode' : ''}`}>
+      <div className={`about-us ${props.theme === 'dark' ? 'dark-mode' : ''}`} style={{height:"100vh"}}>
         <section className={`about-us ${props.theme === 'dark' ? 'dark-mode' : ''}`} style={{fontFamily:"'Poppins', sans-serif"}}>
         <div className="about" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-  <div className="text" style={{ textAlign: 'center', maxWidth: '800px', width: '100%' }}>
+  <div className="text" style={{ textAlign: 'center', maxWidth: '800px', width: '100%', marginTop:"20px" }}>
     <h2 className="heading" style={{ color: `${props.theme === 'dark' ? '#f5f5f5' : '#333'}` }}>About Us</h2>
     <div style={{ display: 'flex', alignItems: 'center' }}>
       <img src={Images} alt="About Us" className="pic" style={{ width:"300px"}} />
