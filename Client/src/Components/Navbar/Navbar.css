@@ -20,10 +20,12 @@
   }
   
   .header__middle__menus {
-    width: 80%;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    padding-right: 20%;
+    background-color: rgb(23, 23, 65);
   }
   
   .main-nav {
@@ -39,7 +41,7 @@
   }
   
   .menu-item {
-    margin-left: 20px;
+    margin-left: 0px;
     font-size: large;
   }
   
@@ -50,7 +52,7 @@
   .menu-item a {
     display: flex;
     align-items: center;
-    color: #333;
+    color: #ffffff;
     text-decoration: none;
     transition: color 0.3s ease;
   }
@@ -370,3 +372,22 @@
     background: #f5f5f5;
   }
   
+  /* Navbar.css */
+
+/* ... Your existing styles ... */
+
+.logo-container {
+  width: 70px; /* Adjust the width of the logo container as needed */
+  height: 70px; /* Adjust the height of the logo container as needed */
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 50%;
+  background-image: './logo.png';
+}

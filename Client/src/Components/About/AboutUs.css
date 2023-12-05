@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
 
 .about-us {
-  height: 110vh;
+  height: 100%;
   /* width: 100%; */
   background: url('../Images/about-bg.gif');
   background-size: cover;
@@ -110,6 +110,7 @@ span{
 
 .heading{
   margin-top: 100px;
+  align-items: center;
 }
 
 .about {

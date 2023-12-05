@@ -1,10 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link instead of NavLink
 import './Navbar.css';
+import logo from'./logo.png'
 
 const Navbar = () => {
   return (
     <div className={`header__middle__menus`}>
+      <div className="logo-container">
+        <img
+          src={logo}  // Replace with the path to your logo image
+          alt="Logo"
+          className="logo"
+        />
+      </div>
       <nav className="main-nav">
         <ul className={`main-menu`}>
           <li className={`menu-item`}>
