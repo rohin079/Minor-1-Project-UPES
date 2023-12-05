@@ -47,7 +47,9 @@
 
   .achievements-page {
     text-align: center;
-    margin-top: 20px; /* Adjust as needed */
+    padding-top: 20px; /* Adjust as needed */
+    background-image: url(https://tse1.mm.bing.net/th?id=OIP.EnZdWkJLhK9EugNtOCIgBQHaEo&pid=Api&P=0&h=180);
+    background-size: cover;
   }
   
   /* Styles for the achievements title */

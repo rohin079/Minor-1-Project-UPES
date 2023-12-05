@@ -18,8 +18,8 @@ import img8 from './csi2.png';
 
 export default function ActionAreaCard() {
     return (
-        <div className="card-container">
-            <h1>EVENTS</h1>
+        <div className="card-container"style={{ backgroundColor: "rgb(23, 23, 65)"}}>
+            <h1 style={{color:"white"}}>EVENTS</h1>
             <div className="cards-wrapper">
                 {/* Repeat the Card component to ensure at least 4 cards are visible */}
                 <Card className="card">

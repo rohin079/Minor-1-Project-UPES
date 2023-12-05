@@ -23,10 +23,10 @@
 .about-title{
     position: relative;
     color: #0E2431;
-    margin-top: 10px;
+    padding-top: 10px;
     margin-bottom: 50px;
     text-align: center;
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
 .about-data{
@@ -37,7 +37,9 @@
 }
 
 #about{
-    margin-bottom: 100px;
+    padding-bottom: 5%;
+    background-image: url(https://tse1.mm.bing.net/th?id=OIP.EnZdWkJLhK9EugNtOCIgBQHaEo&pid=Api&P=0&h=180);
+    background-size: cover;
 }
 
 @media screen and (min-width:768px) {

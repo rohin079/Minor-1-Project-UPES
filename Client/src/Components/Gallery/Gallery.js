@@ -23,7 +23,8 @@ const Gallery = () => {
                 style={{
                   textTransform: 'none',
                   fontFamily: "'Poppins', sans-serif",
-                  marginLeft: '75px',
+                  marginLeft: '15px',
+                  marginTop:"20px",
                   borderRadius: '10px',
                 }}
                 variant="contained"
@@ -43,7 +44,8 @@ const Gallery = () => {
                 style={{
                   textTransform: 'none',
                   fontFamily: "'Poppins', sans-serif",
-                  marginLeft: '75px',
+                  marginLeft: '15px',
+                  marginTop:"20px",
                   borderRadius: '10px',
                 }}
                 variant="contained"
@@ -63,8 +65,8 @@ const Gallery = () => {
                 style={{
                   textTransform: 'none',
                   fontFamily: "'Poppins', sans-serif",
-                  marginLeft: '75px',
-                  borderRadius: '10px',
+                  marginLeft: '15px',
+                  marginTop:"20px",                  borderRadius: '10px',
                 }}
                 variant="contained"
                 color="secondary">
@@ -83,8 +85,8 @@ const Gallery = () => {
                 style={{
                   textTransform: 'none',
                   fontFamily: "'Poppins', sans-serif",
-                  marginLeft: '75px',
-                  borderRadius: '10px',
+                  marginLeft: '15px',
+                  marginTop:"20px",                  borderRadius: '10px',
                 }}
                 variant="contained"
                 color="secondary">
@@ -103,8 +105,8 @@ const Gallery = () => {
                 style={{
                   textTransform: 'none',
                   fontFamily: "'Poppins', sans-serif",
-                  marginLeft: '75px',
-                  borderRadius: '10px',
+                  marginLeft: '15px',
+                  marginTop:"20px",                  borderRadius: '10px',
                 }}
                 variant="contained"
                 color="secondary">
@@ -123,8 +125,8 @@ const Gallery = () => {
                 style={{
                   textTransform: 'none',
                   fontFamily: "'Poppins', sans-serif",
-                  marginLeft: '75px',
-                  borderRadius: '10px',
+                  marginLeft: '15px',
+                  marginTop:"20px",                  borderRadius: '10px',
                 }}
                 variant="contained"
                 color="secondary">

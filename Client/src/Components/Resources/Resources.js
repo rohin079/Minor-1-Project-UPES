@@ -1,64 +1,85 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Typography from '@mui/material/Typography';
-const theme = createTheme();
+import React, { useState, useEffect } from 'react';
+import { Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import "./resources.css";
+import image from './bg.jpg'
+import dark from './dark.jpg';
 
-theme.typography.h3 = {
-  fontSize: '1.2rem',
-  '@media (min-width:600px)': {
-    fontSize: '1.5rem',
-  },
-  [theme.breakpoints.up('md')]: {
-    fontSize: '2rem',
-  },
-};
+const CategorySelection = (props) => {
+  const navigate = useNavigate();
+  const [hoveredCategory, setHoveredCategory] = useState(null);
 
-const styles = {
-    centerContent: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      background: 'linear-gradient(to right, #3725A4 ,#1975b5)',
-      WebkitBackgroundClip: 'text',
-      color: 'transparent'
-    
-    //   height: '100vh'
-    },
-  };  
+  const categories = [
+    { name: 'B Tech CSE',  subcategories: ['Year 1', 'Year 2', "Year 3", 'Year 4'] },
+    { name: 'B Design',  subcategories: ['Year 1', 'Year 2', "Year 3", 'Year 4','Year 5'] },
+    { name: 'B Sc', subcategories: ['Year 1', 'Year 2'] },
+    { name: 'B BA', subcategories: ['Year 1', 'Year 2', "Year 3"] },
+  ];
 
-  const containerStyles = {
-    backgroundImage: `url(https://i.pinimg.com/originals/48/bd/7c/48bd7c6e9b128643ba415cea5c6b3ede.gif)`, // Set the background image
-    backgroundSize: 'cover',
-    height: '100vh', // Adjust the height as needed
+  const handleSubcategorySelect = (subcategory) => {
+    navigate(`/items/${subcategory}`);
   };
 
-export default function Resources(){
-    return(
-        <Box sx={{...containerStyles, '& button': { ml: 75 } }} >
-        <br/> <br/>
-        <ThemeProvider theme={theme}>
-        <div style={styles.centerContent}>
-        <Typography variant="h3">Please select your year</Typography>
-      </div>        
-      </ThemeProvider>
-      <br /><br /><br />
-        <Button variant="contained" size="large" color='secondary' >
-          Year 1
-        </Button>
-        <br /><br /><br />
-        <Button variant="contained" size="large" color='secondary' >
-          Year 2
-        </Button>
-        <br /><br /><br />
-        <Button variant="contained" size="large" color='secondary' >
-          Year 3
-        </Button>
-        <br /><br /><br />
-        <Button variant="contained" size="large" color='secondary' >
-          Year 4
-        </Button>
-        </Box>
-    )
-}
+  const handleMouseEnter = (category) => {
+    setHoveredCategory(category);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredCategory(null);
+  };
+
+  useEffect(() => {
+    if (props.theme !== 'dark') {
+      document.body.style.background = `url(${image}) `;
+      document.body.style.backgroundSize = 'cover';
+    }
+    else {
+      document.body.style.background = `url(${dark}) `;
+      document.body.style.backgroundSize = 'cover';
+    }
+
+    return () => {
+      document.body.style.background = null;
+    };
+  }, [props.theme]);
+
+  return (
+    <>
+      <div style={{ marginBottom: '150px'}}>
+        <h1 className='text-center pt-5' style={{color: `${props.theme === 'dark' ? '#f5f5f5' : '#333'}`}}>Select A your Year</h1>
+        <div className="category-blocks" >
+          {categories.map((category) => (
+            <div
+              key={category.name}
+              className={'category-block'}
+              onMouseEnter={() => handleMouseEnter(category.name)}
+              onMouseLeave={handleMouseLeave}
+              style={{  backgroundColor: "rgb(23, 23, 65)", backgroundSize: "cover"}}
+            >
+              <div className="category-overlay" style={{borderRadius:"5%", backgroundColor:"transparent"}}>
+                {hoveredCategory === category.name ? (
+                  <div className="subcategory-buttons">
+                    {category.subcategories.map((subcategory) => (
+                      <Button
+                        key={subcategory}
+                        variant="contained"
+                        color="secondary"
+                        style={{ textTransform: "none", fontFamily: "'Poppins', sans-serif", borderRadius: "10px" }}
+                        onClick={() => handleSubcategorySelect(subcategory)}
+                      >
+                        {subcategory}
+                      </Button>
+                    ))}
+                  </div>
+                ) :
+                  (category.name)}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default CategorySelection;
