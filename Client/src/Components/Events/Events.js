@@ -11,7 +11,7 @@ import img1 from './acm.jpeg';
 import img2 from './csa.png';
 import img3 from './Open.png';
 import img4 from './csi.png';
-import img5 from './csf.png';
+import img5 from './csf2.png';
 import img6 from './csa2.png';
 import img7 from './open2.png';
 import img8 from './csi2.png';
