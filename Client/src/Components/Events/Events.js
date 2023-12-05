@@ -30,9 +30,16 @@ export default function ActionAreaCard() {
                                 UPES ACM
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica  this example, I increased the width of each card to 300px and adjusted the margin to reduce the gap between cards. Feel free to experiment with these values to achieve the desired spacing and card size. Remember that the total width of cards plus margins should be less than or equal to the width of the container to ensure that at least 4 cards are visible on the screen. Adjust the values based on your design preferences and screen size.
-
+                                Established in the year 2010, The UPES ACM Student Chapter primarily
+                                focuses on creating interest, developing logical thinking ability and
+                                spreading awareness about the technological and computing information
+                                among the people. Started as a small unit, the UPES ACM society evolved
+                                consistently year by year and is now the only student chapter with
+                                international exposure. The UPES ACM team believes in working together
+                                as a family and always standing as a constant support for each other.
+                                Currently a team of about 400 members, the chapter works as hard as
+                                possible and put all our hearts and sweat to make sure that it functions
+                                properly and stands to people’s expectations.
                             </Typography>
                         </CardContent>
                     </CardActionArea>
@@ -75,11 +82,11 @@ export default function ActionAreaCard() {
                                 UPES CSI
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                            Computer Society of India is a body of computer professionals in India, who wanted to share their ideas, passion and knowledge. The UPES branch of the Computer Society of India, UPES-CSI, was formed in 2010, and saw the motto for a forum to “CREATE, SHARE, and INNOVATE”.
+                                Computer Society of India is a body of computer professionals in India, who wanted to share their ideas, passion and knowledge. The UPES branch of the Computer Society of India, UPES-CSI, was formed in 2010, and saw the motto for a forum to “CREATE, SHARE, and INNOVATE”.
 
-UPES-CSI continued to organise several seminars, workshops, and training sessions, educating its youth with cutting-edge advances. This organisation strives to give the students access to the most recent technological knowledge, a range of creative activities, and the opportunity to network with eminent lecturers who specialise in various technologies.
+                                UPES-CSI continued to organise several seminars, workshops, and training sessions, educating its youth with cutting-edge advances. This organisation strives to give the students access to the most recent technological knowledge, a range of creative activities, and the opportunity to network with eminent lecturers who specialise in various technologies.
 
-In the years succeeding its creation, UPES-CSI came to be recognised as one of the Best Student Chapters, acclaiming the zeal, passion and dedication of the team. UPES-CSI is an all-inclusive resource for technocrats looking for affordable advice. As of today, UPES-CSI has collaborated with geeksforgeeks, the biggest computer science portal for geeks in the world. Apart from collaborations, UPES-CSI also hosts its flagship events yearly, with the latest being Arena 2.0, Hackathon 7.0 and Yugmak ‘23
+                                In the years succeeding its creation, UPES-CSI came to be recognised as one of the Best Student Chapters, acclaiming the zeal, passion and dedication of the team. UPES-CSI is an all-inclusive resource for technocrats looking for affordable advice. As of today, UPES-CSI has collaborated with geeksforgeeks, the biggest computer science portal for geeks in the world. Apart from collaborations, UPES-CSI also hosts its flagship events yearly, with the latest being Arena 2.0, Hackathon 7.0 and Yugmak ‘23
 
                             </Typography>
                         </CardContent>
@@ -95,7 +102,8 @@ In the years succeeding its creation, UPES-CSI came to be recognised as one of t
                                 UPES CSF
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                            
+                                Cybersentinel, as you all know, is not just a student organization; it's a community of individuals who are deeply passionate about technology and cybersecurity. Founded on January 28, 2020, on International Data Privacy Day, our mission is to empower students and make them cyber-aware. We are a multifaceted group engaged in a wide array of tech-related activities. We not only conduct CTFs, Workshops, Talks, Challenges, and provide Solutions and guidance as a team of cybersecurity enthusiasts but also delve into various technology domains. We design websites, explore cutting-edge tech trends, and offer a holistic approach to tech education. Our team is comprised of the next generation of technology enthusiasts, equipped to tackle a myriad of technological challenges, and dedicated to developing both robust Cyber-Armor and versatile tech expertise.
+                                UPES CYBER SENTINEL even has a wing for girls who want to excel in the security field. Miss In Cyber is an initiative to empower girls in the domain of cyber security.
                             </Typography>
                         </CardContent>
                     </CardActionArea>
@@ -106,6 +114,7 @@ In the years succeeding its creation, UPES-CSI came to be recognised as one of t
                 {/* Repeat the Card component to ensure at least 4 cards are visible */}
                 {/* ... Add more cards as needed ... */}
             </div>
+            <button className="share-btn">Edit the Events</button>
         </div>
     );
 }
