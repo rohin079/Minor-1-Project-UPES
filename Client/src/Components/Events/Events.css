@@ -1,177 +1,60 @@
-@mixin aspect-ratio($width, $height) {
-    position: relative;
-      
-    &:before {
-      display: block;
-      content: "";
-      width: 100%;
-      padding-top: ($height / $width) * 100%;
-    }
-      
-    > img {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          width: 100%;
-          height: 100%;
-          justify-content: center;
-    }
-  }
-  
-  
-  section {
-      background: #F4F4F4;
-      padding: 50px 0;
-  }
-  
-  .container {
-      max-width: 1044px;
-      margin: 0 auto;
-      padding: 0 20px;
-      justify-content: center;
-  }
-  h1{
+/* customCardStyles.css */
+
+.card-container {
     text-align: center;
-    font-family:Arial, Helvetica, sans-serif;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2; /* Retaining the existing background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
   }
   
-  .carousel {
-      display: block;
-      text-align: left;
-      position: relative;
-      margin-bottom: 22px;
-      justify-content: center;
-      > input {
-          clip: rect(1px, 1px, 1px, 1px);
-          clip-path: inset(50%);
-          height: 1px;
-          width: 1px;
-          margin: -1px;
-          overflow: hidden;
-          padding: 0;
-          position: absolute;
-          justify-content: center;
-          &:nth-of-type(6):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -500%; }
-          &:nth-of-type(5):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -400%; }
-          &:nth-of-type(4):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -300%; }
-          &:nth-of-type(3):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -200%; }
-          &:nth-of-type(2):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -100%; }
-          &:nth-of-type(1):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: 0%; }
-          
-          &:nth-of-type(1):checked ~ .carousel__thumbnails li:nth-of-type(1) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-          &:nth-of-type(2):checked ~ .carousel__thumbnails li:nth-of-type(2) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-          &:nth-of-type(3):checked ~ .carousel__thumbnails li:nth-of-type(3) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-          &:nth-of-type(4):checked ~ .carousel__thumbnails li:nth-of-type(4) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-          &:nth-of-type(5):checked ~ .carousel__thumbnails li:nth-of-type(5) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-          &:nth-of-type(6):checked ~ .carousel__thumbnails li:nth-of-type(6) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-      }
+  .cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
   
-  .carousel__slides {
-      position: relative;
-      z-index: 1;
-      padding: 0;
-      margin: 0;
-      overflow: hidden;
-      white-space: nowrap;
-      box-sizing: border-box;
-      display: flex;
-      
+  .card {
+    width: 300px;
+    height: auto; /* Corrected property name from length to height */
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff; /* White background color for cards */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
   }
   
-  .carousel__slide {
-      position: relative;
-      display: flex;
-      flex: 1 0 100%;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      transition: all 300ms ease-out;
-      vertical-align: top;
-      box-sizing: border-box;
-      white-space: normal;
-      justify-content: center;
-      
-      figure {
-          display: flex;
-          margin: 0;
-      }
-      
-      div {
-          @include aspect-ratio(3, 2);
-          width: 100%;
-          justify-content: center;
-      }
-      
-      img {
-          display: block;
-          flex: 1 1 auto;
-          object-fit: cover;
-          
-      }
-      
-      figcaption {
-          align-self: flex-end;
-          padding: 20px 20px 0 20px;
-          flex: 0 0 auto;
-          width: 25%;
-          min-width: 150px;
-      }
-      
-      .credit {
-          margin-top: 1rem;
-          color: rgba(0, 0, 0, 0.5);
-          display: block;        
-      }
-      
-      &.scrollable {
-          overflow-y: scroll;
-      }
+  .cardMedia {
+    flex: 1;
   }
   
-  .carousel__thumbnails {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      margin: 0 -10px;
-      
-      .carousel__slides + & {
-          margin-top: 20px;
-      }
-      
-      li {        
-          flex: 1 1 auto;
-          max-width: calc((100% / 6) - 20px);  
-          margin: 0 10px;
-          transition: all 300ms ease-in-out;
-          justify-content: center;
-      }
-      
-      label {
-          display: block;
-          @include aspect-ratio(1,1);
-          
-                    
-          &:hover,
-          &:focus {
-              cursor: pointer;
-              
-              img {
-                  box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.25);
-                  transition: all 300ms ease-in-out;
-              }
-          }
-      }
-      
-      img {
-          display: block;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          justify-content: center;
-      }
+  .cardMedia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-top-left-radius: 8px; /* Match border radius with the card */
+    border-top-right-radius: 8px;
   }
+  
+  .cardContent {
+    padding: 16px;
+  }
+  
+  .share-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #ff000d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 999; /* Ensure it's above other elements */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+  }
+  

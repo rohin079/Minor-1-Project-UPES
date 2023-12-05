@@ -1,0 +1,76 @@
+/* Achievements.css */
+/* Achievements.css */
+
+/* Styles for the achievements container */
+.achievements-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Styles for each achievement block */
+  .achievement-block {
+    width: 80%; /* Adjust the width as needed */
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex; /* Display flex to align items */
+  }
+  
+  /* Styles for the achievement image */
+  .achievement-image {
+    width: 40%; /* Adjust image width */
+    height: auto;
+    display: block;
+  }
+  
+  /* Styles for the achievement content */
+  .achievement-content {
+    padding: 20px;
+    width: 60%; /* Adjust content width */
+  }
+  
+  /* Additional styling for achievement title */
+  .achievement-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  /* Additional styling for achievement description */
+  .achievement-description {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .achievements-page {
+    text-align: center;
+    margin-top: 20px; /* Adjust as needed */
+  }
+  
+  /* Styles for the achievements title */
+  .achievements-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold; /* Make the text bold */
+    color: rgb(62, 11, 62); /* Change the text color to a specific color (e.g., dark gray) */
+  }
+  
+  
+  /* Styles for the fixed Share Your Achievement button */
+  .share-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 999; /* Ensure it's above other elements */
+  }
+  

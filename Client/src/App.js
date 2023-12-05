@@ -14,7 +14,7 @@ import Alumni from "./Components/AlumniTalk/alumni";
 import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 import Gallery from './Components/Gallery/Gallery'
 import Resources from "./Components/Resources/Resources";
-
+import Achievements from "./Components/Achievements/Achievements";
 //------------------------Importing Msal config----------------------------------
 
 import { MsalProvider, useMsal } from "@azure/msal-react";
@@ -72,11 +72,12 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
         <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
-        <Route path="/events" element={<ProtectedRoute><Events /></ProtectedRoute>} />
+        <Route path="/events" element={<Events />} />
         <Route path="/gallery" element={<ProtectedRoute><Gallery /></ProtectedRoute>} />
         <Route path="/resources" element={<ProtectedRoute><Resources /></ProtectedRoute>} />
         <Route path="/feedback" element={<ProtectedRoute><Feedback /></ProtectedRoute>} />
         <Route path="/alumni" element={<ProtectedRoute><Alumni /></ProtectedRoute>} />
+        <Route path="/achievements" element={<ProtectedRoute><Achievements /></ProtectedRoute>} />
       </Routes>
     </Router>
         </MsalProvider>
