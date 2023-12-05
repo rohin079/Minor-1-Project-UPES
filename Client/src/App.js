@@ -77,7 +77,7 @@ function App() {
         <Route path="/resources" element={<ProtectedRoute><Resources /></ProtectedRoute>} />
         <Route path="/feedback" element={<ProtectedRoute><Feedback /></ProtectedRoute>} />
         <Route path="/alumni" element={<ProtectedRoute><Alumni /></ProtectedRoute>} />
-        <Route path="/achievements" element={<Achievements />} />
+        <Route path="/achievements" element={<ProtectedRoute><Achievements /></ProtectedRoute>} />
       </Routes>
     </Router>
         </MsalProvider>
