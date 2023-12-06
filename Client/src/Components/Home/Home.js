@@ -1,6 +1,5 @@
 import './Home.css';
 import React, { } from 'react';
-import image from './giphy.gif';
 import { Button } from '@mui/material';
 import { useMsal } from "@azure/msal-react";
 import { NavLink } from 'react-router-dom';
