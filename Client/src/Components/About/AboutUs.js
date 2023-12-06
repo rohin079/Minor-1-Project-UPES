@@ -21,7 +21,7 @@ const AboutUs = (props) => {
       </div>
     </div>
     <div className="data">
-      <a href="/login" className="hire">Try Us</a>
+      <a href="/home" className="hire">Try Us</a>
     </div>
   </div>
 </div>

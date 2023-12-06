@@ -22,11 +22,11 @@ const Home = (props) => {
         <div className="row" style={{ color: `${props.theme === 'dark' ? '#f5f5f5' : '#333'}`, width: "100%" }}>
           <div className="col-md-6">
             {/* Align the image to the left */}
-            <img src="http://4.bp.blogspot.com/-v4Bzaj5eoAI/UXipBY1J10I/AAAAAAAAAL0/DtwOAG6V4YQ/s1600/BzB_Animated_WELCOME1_.gif" style={{ width: "500px" }} alt="" />
+            <img src="http://4.bp.blogspot.com/-v4Bzaj5eoAI/UXipBY1J10I/AAAAAAAAAL0/DtwOAG6V4YQ/s1600/BzB_Animated_WELCOME1_.gif" style={{ width: "500px", marginLeft: "25%"}} alt="" />
           </div>
           <div className="col-md-6">
             {/* Align the rest of the elements to the right */}
-            <p className="respo changing-text" style={{ fontSize: "1.7rem", fontWeight: "bold", textAlign: "center", justifyContent: "center", marginLeft: "30px", color: "white" }}>{text} </p>
+            <p className="respo changing-text" style={{ fontSize: "1.7rem", fontWeight: "bold", textAlign: "center", justifyContent: "center", marginLeft: "30px", marginTop: "100px", marginRight: "100px",  color: "white" }}>{text} </p>
             <p style={{ fontSize: "1rem", marginLeft: "10px", color: "white" }}>"Embark on a Journey of Connection: Your Gateway to All Things College, from Campus Buzz to Lifelong Bonds. Explore the vibrant happenings of your academic life today, and discover a bridge to connect with cherished alumni stories that shape your tomorrow." </p>
             <div className="d-flex justify-content-center">
               <NavLink to="/about" style={{ textDecoration: 'none' }}>
